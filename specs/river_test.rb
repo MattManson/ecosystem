@@ -46,7 +46,7 @@ class TestEcoSystem < MiniTest::Test
   def test_bear_ate_fish_river_contents
     result1 = @bear.eats_fish(@fish1)
     result2 = @river.loses_fish([@fish1])
-    assert_equal(1, result1)
+    assert_equal(1, @bear.stomach_size)
     assert_equal(199, result2)
 
   end
